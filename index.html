@@ -1,23 +1,8 @@
 <html>
 	<head>
-		<script>
-			function handleLoad(e) {
-    			console.log('Loaded import: ' + e.target.href);
-  			}
-  			function handleError(e) {
-    			console.log('Error loading import: ' + e.target.href);
-  			}
-		</script>
-		
 		<link rel="import" href="resources/imports/resources.html" onload="handleLoad(event)" onerror="handleError(event)"">
-		<link rel="import" href="resources/imports/header.html" onload="handleLoad(event)" onerror="handleError(event)">
-		
-		<script>
-			var htmlDoc = document.getElementsByTagName("link")[1].import;
-			var htmlHeader = htmlDoc.querySelector('.header');
-			document.body.appendChild(htmlHeader.cloneNode(true));
-		</script>
 	</head>
+
 	<body>
 		<div class="container">
 			<div class="jumbotron">
