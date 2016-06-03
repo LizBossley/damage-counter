@@ -7,6 +7,9 @@
 		<div class="container">
 			<div class="jumbotron">
 				<p> Welcome to this card-edit page </p>
+				<form id="card-edit">
+					
+				</form>
 			</div>
 		</div>
 	</body>

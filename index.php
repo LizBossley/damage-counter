@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="import" href="resources/imports/resources.html" onload="handleLoad(event)" onerror="handleError(event)"">
+		<link rel="import" href="resources/imports/resources.html" onload="handleLoad(event)" onerror="handleError(event)">
 	</head>
 
 	<body>
