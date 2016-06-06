@@ -1,14 +1,20 @@
-<html>
-	<head>
-		<link rel="import" href="resources/imports/resources.html" onload="handleLoad(event)" onerror="handleError(event)">
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Home</title>
+		<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+		<script src="resources/js/jquery-2.2.4.min.js"></script>
 	</head>
-
 	<body>
 		<div class="container">
 			<div class="jumbotron">
 				<p> Welcome to this home page </p>
-				<p> Would you like to <a href="cards/list.html">view</a> the cards?</p>
-				<p> Would you like to <a href="cards/edit.html">add</a> a card?</p>
+				<p> Would you like to <a href="cards/list.php">view</a> the cards?</p>
+				<p> Would you like to <a href="cards/edit.php">add</a> a card?</p>
 			</div>
 		</div>
 	</body>
