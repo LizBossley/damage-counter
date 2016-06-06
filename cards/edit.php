@@ -37,6 +37,10 @@
 						<option value="12">Minions</option>
 					</optgroup>
 					</select>
+					<label>Base size:</label>
+					<input type="radio" name="size" value="1" checked> Small
+					<input type="radio" name="size" value="2"> Medium
+					<input type="radio" name="size" value="3"> Large
 					<input id="submit" type="button" value="Submit">
 				</form>
 			</div>
