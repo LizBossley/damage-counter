@@ -1,32 +1,57 @@
-$(document).ready(function(){
-$("#submit").click(function(){
-var name = $("#name").val();
-var faction = $("#faction").val();
-var game = 0; //default warmachine
-if(faction > 7) {
-	game = 1; //else set to hordes
-}
-var size = $('[name=size]:checked').val();
+$(document).ready(function() {
+    validateForm();
+});
 
-// Returns successful data submission message when the entered information is stored in database.
-var dataString = 'name1='+ name + '&faction1=' + faction + '&game1='+ game + '&size1=' + size;
-if(name==''||faction=='')
-{
-alert("Please Fill All Fields");
+function submitForm() {
+    console.log("i'm being called (submit form)");
+    var name = $("#name").val();
+    var faction = $("#faction").val();
+    var game = 0; //default warmachine
+    if (faction > 7) {
+        game = 1; //else set to hordes
+    }
+    var size = $('[name=size]:checked').val();
+
+    // Returns successful data submission message when the entered information is stored in database.
+    var dataString = 'name1=' + name + '&faction1=' + faction + '&game1=' + game + '&size1=' + size;
+    if (name == '' || faction == '') {
+        alert("Please Fill All Fields");
+    } else {
+        // AJAX Code To Submit Form.
+        $.ajax({
+            type: "POST",
+            url: "ajaxsubmit.php",
+            data: dataString,
+            cache: false,
+            success: function(result) {
+                alert(result);
+            }
+        });
+    }
+    return false;
 }
-else
-{
-// AJAX Code To Submit Form.
-$.ajax({
-type: "POST",
-url: "ajaxsubmit.php",
-data: dataString,
-cache: false,
-success: function(result){
-alert(result);
+
+function validateForm() {
+    console.log("vally in the house");
+    $("#card-edit").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                faction: {
+                    required: true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your name",
+                },
+                faction: {
+                    required: "Please select a faction.",
+                }
+            },
+            submitHandler: function(form) {
+                submitForm();
+            }
+        });
 }
-});
-}
-return false;
-});
-});
