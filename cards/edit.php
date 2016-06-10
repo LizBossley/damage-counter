@@ -102,6 +102,7 @@
 				</form>
 			</div>
 		</div>
+		
 <script>
 $("#faction").change(function() {
 var faction = $("#faction").val();
