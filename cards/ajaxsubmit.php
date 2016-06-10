@@ -9,13 +9,13 @@ if (mysqli_connect_errno())
 
 $db = mysqli_select_db($con, "damage_counter"); // Selecting Database
 //Fetching Values from URL
-$name2=mysqli_real_escape_string($con, $_POST['name1']);
-$faction2=mysqli_real_escape_string($con, $_POST['faction1']);
-$game2=mysqli_real_escape_string($con, $_POST['game1']);
-$size2=mysqli_real_escape_string($con, $_POST['size1']);
+$name=mysqli_real_escape_string($con, $_POST['name']);
+$faction=mysqli_real_escape_string($con, $_POST['faction']);
+$game=mysqli_real_escape_string($con, $_POST['game']);
+$size=mysqli_real_escape_string($con, $_POST['size']);
 
 //Insert query
-$query = mysqli_query($con, "INSERT INTO card_list(name, faction, game, size) VALUES ('$name2', '$faction2', '$game2', '$size2')");
+$query = mysqli_query($con, "INSERT INTO card_list(name, faction, game, size) VALUES ('$name', '$faction', '$game', '$size')");
 echo "Form Submitted Succesfully";
 mysqli_close($con); // Connection Closed
 ?>

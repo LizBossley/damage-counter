@@ -13,7 +13,7 @@ function submitForm() {
     var size = $('[name=size]:checked').val();
 
     // Returns successful data submission message when the entered information is stored in database.
-    var dataString = 'name1=' + name + '&faction1=' + faction + '&game1=' + game + '&size1=' + size;
+    var dataString = 'name=' + name + '&faction=' + faction + '&game=' + game + '&size=' + size;
     if (name == '' || faction == '') {
         alert("Please Fill All Fields");
     } else {
