@@ -83,12 +83,16 @@
 											<input class="form-control" id="arm" name="arm" type="text">
 											<label>CMD :</label>
 											<input class="form-control" id="cmd" name="cmd" type="text">
-											<label>FURY :</label>
-											<input class="form-control" id="fury" name="fury" type="text">
-											<label>THR :</label>
-											<input class="form-control" id="thr" name="thr" type="text">
-											<label>FOCUS :</label>
-											<input class="form-control" id="focus" name="focus" type="text">
+											<div class="hordes">	
+												<label>FURY :</label>
+												<input class="form-control" id="fury" name="fury" type="text">
+												<label>THR :</label>
+												<input class="form-control" id="thr" name="thr" type="text">
+											</div>
+											<div class="warmachine">
+												<label>FOCUS :</label>
+												<input class="form-control" id="focus" name="focus" type="text">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -98,5 +102,18 @@
 				</form>
 			</div>
 		</div>
+<script>
+$("#faction").change(function() {
+var faction = $("#faction").val();
+    if (faction > 7) {
+        $('.warmachine').hide();
+        $('.hordes').show();
+    } else {
+    	$('.hordes').hide();
+        $('.warmachine').show();
+    }
+});
+</script>
+
 	</body>
 </html>

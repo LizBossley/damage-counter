@@ -32,12 +32,12 @@ $result = mysqli_query($con,$sql);
 echo "<table>
 <tr>
 <th>Name</th>
-<th>Game</th>
+<th>View/Edit</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
     echo "<td>" . $row['name'] . "</td>";
-    echo "<td>" . ($row['game'] == 0 ? "Warmachine" : "Hordes") . "</td>";
+    echo "<td><a href='/edit?id=" . $row['id'] . "'>Edit</a> | <a href='/edit?id=" . $row['id'] . "'>View</a></td>"; 
     echo "</tr>";
 }
 echo "</table>";
